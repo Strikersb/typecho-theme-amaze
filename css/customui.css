@@ -387,11 +387,17 @@ div.notepad-index-post-tags {
     cursor: default;
 }
 .post-tags>a{
+    float: right;
     font-size: 1rem;
     position: relative;
     overflow: visible;
     color: #999;
     margin-left: 0.4rem;
+}
+@media only screen and (min-width: 768px) {
+    .post-tags{
+        text-align: right;
+    }
 }
 .post-tags>a::before{
     position: relative;

@@ -27,11 +27,11 @@ $this->need('header.php');
             </div>
 
             <div class="am-g blog-meta">
-                <div class="am-u-lg-6 am-text-left">
-                    Posted by <?php $this->author(); ?> on <?php $this->date('Y/m/d'); ?>
+                <div class="am-u-lg-6 am-u-sm-6">
+                    <?php $this->date('Y/m/d'); ?>
                 </div>
 
-                <div class="am-u-lg-6 am-text-right post-tags">
+                <div class="am-u-lg-6 am-u-sm-6 post-tags">
                     <?php $this->category(' '); ?>
                 </div>
             </div>
