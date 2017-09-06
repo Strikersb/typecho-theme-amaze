@@ -21,13 +21,19 @@ $this->need('header.php');
         <?php while($this->next()): ?>
         <article class="am-g blog-entry-article">
             <div class="am-u-lg-6 am-u-lg-12 am-u-sm-12 blog-entry-text">
-                <span> <a href="<?php $this->author->permalink(); ?>">作者:<?php $this->author(); ?></a> &nbsp;</span>
-                <span>时间:<?php $this->date('F j, Y'); ?></span>
-                <div class="notepad-index-post-tags"><?php $this->category('  '); ?>&nbsp;</div>
                 <h1><a target="_blank" itemtype="url" href="<?php $this->permalink() ?>"><?php $this->title() ?></a></h1>
             <div>
-    		<?php $this->content(''); ?>
-            <a href="<?php $this->permalink() ?>" class="blog-continue" target="_blank">继续阅读 »</a>
+    		<?php $this->excerpt(200, '...'); ?>
+            </div>
+
+            <div class="am-g blog-meta">
+                <div class="am-u-lg-6 am-text-left">
+                    Posted by <?php $this->author(); ?> on <?php $this->date('Y/m/d'); ?>
+                </div>
+
+                <div class="am-u-lg-6 am-text-right post-tags">
+                    <?php $this->category(' '); ?>
+                </div>
             </div>
               
             </div>
